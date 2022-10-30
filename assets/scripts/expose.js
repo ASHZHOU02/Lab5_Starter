@@ -16,19 +16,19 @@ function init() {
   horn_select.addEventListener('input', (event) =>{
     if(event.target.value === "air-horn"){
       img_main.src = "assets/images/air-horn.svg";
-      aud.src = "assets/audio/air-horn.mp3";
+      aud.setAttribute("src", "assets/audio/air-horn.mp3");
     }
     if(event.target.value === "car-horn"){
       img_main.src = "assets/images/car-horn.svg";
-      aud.src = "assets/audio/car-horn.mp3";
+      aud.setAttribute("src", "assets/audio/car-horn.mp3");
     }
     if(event.target.value === "party-horn"){
       img_main.src = "assets/images/party-horn.svg";
-      aud.src = "assets/audio/party-horn.mp3";
+      aud.setAttribute("src", "assets/audio/party-horn.mp3");
     }
   });
 
-  vol.addEventListener('change', (event) =>{
+  vol.addEventListener('input', (event) =>{
 
     aud.volume = event.target.value / 100;
 
